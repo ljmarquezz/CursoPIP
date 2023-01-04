@@ -1,8 +1,20 @@
 import utils
+import pandas as pd
 
 def run():
-    data=utils.read_csv('./data.csv')
+    #utilizando pandas
+    df = pd.read_csv('./data.csv')
+    #asi se seleccionan solo los paises en sur america
+    df = df[df['Continent'] == 'Africa']
+    #se obtiene el nombre de los paises
+    countries = df['Country'].values
+    #el wpp
+    percentages = df['World Population Percentage'].values
+    #se genera la grafica
+    utils.generate_pie_chart('Africa', countries, percentages)
     
+    #sin utilizar pandas
+    data=utils.read_csv('./data.csv')
     country=input('Type Country => ')
   
     result = utils.population_by_country(data, country)
