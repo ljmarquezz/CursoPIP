@@ -16,21 +16,21 @@ winpty python main.py
 
 # Para correr app
 
-''' sh
+``` sh
 git clone
 cd app
-'''
+```
 
 En gitbash usa estos comando para crear y activar el entorno virtual:
 
-'''sh
+```sh
 winpty python -m venv env
 source ./env/Scripts/activate
-'''
+```
 
 Luego se instalan las librerias requeridas por este proyecto y se corre el programa:
 
-'''sh
+```sh
 pip install -r requirements.txt
 winpty python main.py
-'''
+```
