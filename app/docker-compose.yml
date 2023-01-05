@@ -3,4 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - .:/app #enlaza los archivos de la carpeta al docker, asi no tengo que re build cada vez que se hacen cambios
+      
     
